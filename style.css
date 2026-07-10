@@ -1,0 +1,338 @@
+
+/* ========== GENERAL ========== */
+
+body{
+    margin: 0;
+    min-height: 100vh;
+
+    animation: fadeIn 0.7s;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* ========== HOME BACKGROUND ========== */
+
+.background{
+    background-image: url("IMG/all.png");
+}
+.Mercury-background{
+    background-image: url("IMG/Mercury.png");
+}
+
+.Venus-background{
+    background-image: url("IMG/Venus.jpg");
+}
+
+.Earth-mars-background{
+    background-image: url("IMG/earth and mars.jpg");
+}
+
+.Jupiter-background{
+    background-image: url("IMG/jupiter.png");
+}
+
+.Saturn-background{
+    background-image: url("IMG/saturn.png");
+}
+
+.uranus-background{
+    background-image: url("IMG/uranus.png");
+}
+
+/* ========== TEXT ========== */
+
+h1{
+    font-size: 48px;
+    margin: 50px 20px 10px;
+
+    color: rgb(255, 252, 238);
+
+    animation: slideDown 1.2s ease;
+}
+
+p{
+    font-size: 24px;
+
+    margin: 20px;
+    padding: 10px 70px 20px;
+
+    color: rgb(253, 252, 240);
+
+    animation: slideDown 1.2s ease;
+}
+
+/* ========== OVERLAYS ========== */
+
+.overlay{
+    color: white;
+
+    font-size: 24px;
+    text-align: center;
+    line-height: 1.2;
+
+    padding: 20px;
+
+    min-height: 100vh;
+
+    animation: fadeStart 1.5s ease;
+}
+
+.overlay-all{
+    color: rgb(241, 246, 252);
+
+    text-align: left;
+    line-height: 1.2;
+
+    padding: 20px;
+
+    margin: 230px 0 0 40px;
+
+    width: 670px;
+
+    font-size: 24px;
+
+    min-height: 100vh;
+
+    animation: fadeUp 1.5s ease;
+}
+
+/* ========== BUTTONS ========== */
+
+#StartButton,
+#StartButton_for_E,
+#StartButton_for_M,
+#StartButton_for_V,
+#StartButton_for_J,
+#StartButton_for_S,
+#StartButton_for_U{
+
+    font-size: 24px;
+
+    padding: 12px 24px;
+
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+/* BUTTON POSITIONS */
+
+#StartButton,
+#StartButton_for_E{
+    margin-top: 10px;
+}
+
+#StartButton_for_M{
+    margin: 10px 250px;
+}
+
+#StartButton_for_V,
+#StartButton_for_J,
+#StartButton_for_S,
+#StartButton_for_U{
+    margin-left: 150px;
+}
+
+/* BUTTON COLORS */
+
+#StartButton,
+#StartButton_for_E{
+    background-color: #4c77af;
+}
+
+#StartButton_for_M{
+    background-color: #404852;
+}
+
+#StartButton_for_V,
+#StartButton_for_J,
+#StartButton_for_S,
+#StartButton_for_U{
+    background-color: #836641;
+}
+
+/* ========== BUTTON EFFECTS ========== */
+
+#StartButton{
+    animation: pulse 2s infinite;
+}
+
+#StartButton:hover,
+#StartButton_for_M:hover,
+#StartButton_for_V:hover,
+#StartButton_for_E:hover,
+#StartButton_for_J:hover,
+#StartButton_for_S:hover,
+#StartButton_for_U:hover{
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 0 20px rgba(255,255,255,0.5);
+}
+
+/* ========== ENDING SCREEN ========== */
+
+.ending-screen{
+    position: fixed;
+    inset: 0;
+
+    background: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 1s;
+}
+
+.ending-screen.show{
+    opacity: 1;
+    visibility: visible;
+}
+
+.ending-screen h1{
+    color: white;
+
+    font-size: 3rem;
+
+    text-shadow: 0 0 15px rgba(255,255,255,.7);
+}
+
+/* ========== ANIMATIONS ========== */
+
+@keyframes fadeIn{
+
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+
+}
+
+@keyframes fadeStart{
+
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+
+}
+
+@keyframes slideDown{
+
+    from{
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes pulse{
+
+    0%{
+        box-shadow: 0 0 0 rgba(255,255,255,0);
+    }
+
+    50%{
+        box-shadow: 0 0 20px rgba(255,255,255,.5);
+    }
+
+    100%{
+        box-shadow: 0 0 0 rgba(255,255,255,0);
+    }
+
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media(max-width:768px)
+{
+
+    h1{
+        font-size: 32px;
+
+        text-align: center;
+    }
+
+    p{
+        font-size: 18px;
+
+        padding: 10px 20px;
+
+        text-align: center;
+    }
+
+    .overlay{
+        padding: 30px 15px;
+    }
+
+    .overlay-all{
+        width: 85%;
+
+        margin: 120px auto;
+
+        font-size: 18px;
+    }
+
+    #StartButton,
+    #StartButton_for_E,
+    #StartButton_for_M,
+    #StartButton_for_V,
+    #StartButton_for_J,
+    #StartButton_for_S,
+    #StartButton_for_U{
+
+        width: 80%;
+        max-width: 300px;
+
+        display: block;
+
+        margin: 20px auto;
+
+        font-size: 18px;
+    }
+
+    .ending-screen h1{
+        font-size: 2rem;
+
+        text-align: center;
+
+        padding: 20px;
+    }
+}
